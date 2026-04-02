@@ -1,0 +1,5 @@
+text=input('enter the oridinary:')
+a=input('old world:')
+b=input('new world:')
+brand=text.replace(a,b)
+print(brand)

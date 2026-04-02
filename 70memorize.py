@@ -1,0 +1,12 @@
+def memorize(fib):
+    cache={1:1 , 2:1}
+    def inner(n):
+        if n not in cache:
+            cache[n]=fib(n)
+        return cache[n]
+    return inner
+@memorize
+def fibo(n):
+    print('Calculating fibo{0}'.format(n))
+    return 1 if n<3 else fibo(n-1)+fibo(n-2)
+print(fibo(6))
